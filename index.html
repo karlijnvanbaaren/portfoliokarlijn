@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karlijn — Portfolio | Ontwerper</title>
+  <meta name="description" content="Portfolio van Karlijn — Design, projecten en creatief werk. Ontwerper die aandachtig luistert en prikkelende perspectieven creëert.">
+  
+  <!-- Tailwind CSS CDN for utility support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'wb-black': '#121212',
+            'wb-black-soft': '#242424',
+            'wb-blue-hero': '#73a9d6',
+            'wb-blue-light': '#eaf3fa',
+            'wb-blue-dark': '#4b84b3',
+            'wb-gray-text': '#4a4a4a',
+            'wb-gray-light': '#f8f9fa',
+          },
+          fontFamily: {
+            serif: ['"Libre Baskerville"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'retro-sm': '2px 2px 0px #121212',
+            'retro': '4px 4px 0px #121212',
+            'retro-lg': '6px 6px 0px #121212',
+            'retro-xl': '8px 8px 0px #121212',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-serif text-wb-black bg-white antialiased overflow-x-hidden leading-relaxed">
+
+  <!-- =================================================================
+       SITE HEADER & NAVIGATION
+       Left: Home, Projecten | Center: LOGO | Right: Over mij, Contact
+       ================================================================= -->
+  <header class="py-6 sm:py-8 px-4 bg-white relative z-40 border-b border-wb-black/10">
+    <div class="max-w-6xl mx-auto flex items-center justify-between gap-4 sm:gap-8">
+      
+      <!-- Left Navigation -->
+      <nav aria-label="Navigatie links" class="flex-1">
+        <ul class="flex justify-end sm:justify-center items-center gap-6 sm:gap-12 list-none m-0 p-0">
+          <li class="nav-item active relative" id="navHome">
+            <a href="#home" class="nav-link text-lg sm:text-2xl text-wb-black inline-block py-1 px-1 transition-colors duration-200 hover:text-wb-blue-dark font-serif font-bold">
+              Home
+            </a>
+            <svg class="draw-underline-svg" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true">
+              <path class="draw-path" d="M 2,5 Q 50,1.5 98,5" />
+            </svg>
+          </li>
+          <li class="nav-item relative" id="navProjects">
+            <a href="#projects" class="nav-link text-lg sm:text-2xl text-wb-black inline-block py-1 px-1 transition-colors duration-200 hover:text-wb-blue-dark font-serif">
+              Projecten
+            </a>
+            <svg class="draw-underline-svg" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true">
+              <path class="draw-path" d="M 2,5 Q 50,1.5 98,5" />
+            </svg>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Center Logo -->
+      <a href="#home" class="shrink-0 px-2 flex items-center justify-center transition-transform duration-300 hover:scale-105 focus:outline-none" title="Karlijn Portfolio Home">
+        <img src="Img/LOGO.png" alt="Karlijn" class="h-9 sm:h-12 w-auto object-contain">
+      </a>
+
+      <!-- Right Navigation -->
+      <nav aria-label="Navigatie rechts" class="flex-1">
+        <ul class="flex justify-start sm:justify-center items-center gap-6 sm:gap-12 list-none m-0 p-0">
+          <li class="nav-item relative" id="navAbout">
+            <a href="#about" class="nav-link text-lg sm:text-2xl text-wb-black inline-block py-1 px-1 transition-colors duration-200 hover:text-wb-blue-dark font-serif">
+              Over mij
+            </a>
+            <svg class="draw-underline-svg" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true">
+              <path class="draw-path" d="M 2,5 Q 50,1.5 98,5" />
+            </svg>
+          </li>
+          <li class="nav-item relative" id="navContact">
+            <a href="#contact" class="nav-link text-lg sm:text-2xl text-wb-black inline-block py-1 px-1 transition-colors duration-200 hover:text-wb-blue-dark font-serif">
+              Contact
+            </a>
+            <svg class="draw-underline-svg" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true">
+              <path class="draw-path" d="M 2,5 Q 50,1.5 98,5" />
+            </svg>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- =================================================================
+         VIEW 1: HOME (#home)
+         ================================================================= -->
+    <div id="viewHome" class="page-view active">
+      <!-- HERO BANNER -->
+      <section class="bg-wb-gradient text-wb-black py-16 sm:py-24 border-b border-wb-black/20 relative overflow-hidden" id="homeHero">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+          
+          <!-- Left Column -->
+          <div class="max-w-xl">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 tracking-tight font-serif text-wb-black">
+              Hi, ik ben Karlijn
+            </h1>
+
+            <p class="text-lg sm:text-xl leading-relaxed text-wb-black font-serif mb-8 max-w-lg">
+              Ik ben een ontwerper die aandachtig luistert. Ik probeer telkens nieuwe perspectieven te vinden die mensen prikkelen en aan het denken zetten.
+            </p>
+
+            <div class="flex flex-wrap gap-4 font-sans">
+              <a href="#projects" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider px-6 py-3 bg-wb-black text-white border-[1.5px] border-wb-black hover:bg-white hover:text-wb-black hover:shadow-retro transition-all">
+                Bekijk werk
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#about" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold uppercase tracking-wider px-6 py-3 bg-white text-wb-black border-[1.5px] border-wb-black hover:bg-wb-black hover:text-white hover:shadow-retro transition-all">
+                Meer over mij
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Overlapping Photos -->
+          <div class="flex justify-center items-center relative min-h-[380px] sm:min-h-[440px] py-4 select-none">
+            <div class="relative w-[300px] sm:w-[360px] h-[320px] sm:h-[380px]">
+              
+              <!-- Back Photo: overmij_web.jpg -->
+              <a href="#about" class="group block absolute top-0 right-2 sm:right-4 w-[200px] sm:w-[240px] h-[260px] sm:h-[310px] border-[1.8px] border-wb-black bg-white shadow-retro overflow-hidden hero-tilted-back z-10 cursor-pointer" title="Lees meer over Karlijn" aria-label="Ga naar over mij pagina">
+                <div class="relative w-full h-full">
+                  <img src="Img/overmij_web.jpg" alt="Karlijn portret zwart-wit" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                  <div class="absolute inset-0 bg-wb-black/0 group-hover:bg-wb-black/10 transition-colors"></div>
+                </div>
+              </a>
+
+              <!-- Front Photo: homepagina.jpg -->
+              <a href="#about" class="group block absolute bottom-2 left-2 sm:left-4 w-[220px] sm:w-[260px] h-[270px] sm:h-[320px] border-[1.8px] border-wb-black bg-white shadow-retro-lg overflow-hidden hero-tilted-front z-20 cursor-pointer" title="Hi, ik ben Karlijn — Lees meer over mij" aria-label="Ga naar over mij pagina">
+                <div class="relative w-full h-full">
+                  <img src="Img/homepagina.jpg" alt="Hi, ik ben Karlijn" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                  <div class="absolute inset-0 bg-wb-black/0 group-hover:bg-wb-black/10 transition-colors"></div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS SECTION -->
+      <section class="py-20 sm:py-24">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          
+          <div class="mb-14 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
+            <div>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold relative inline-block text-wb-black font-serif">
+                Projecten
+                <svg class="draw-underline-svg" viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="draw-path" d="M 2,5 Q 50,1.5 98,5" />
+                </svg>
+              </h2>
+              <p class="text-base text-wb-gray-text italic mt-2.5 font-serif">
+                Een selectie van mijn recente werk en creaties
+              </p>
+            </div>
+            
+            <a href="#projects" class="inline-flex items-center gap-2 text-base font-bold border-b-[1.5px] border-wb-black pb-1 hover:text-wb-blue-dark hover:border-wb-blue-dark transition-all font-sans">
+              Bekijk alle projecten &rarr;
+            </a>
+          </div>
+
+          <!-- 2 Project Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <!-- Card 1: Student Challenge STOP! -->
+            <a href="#project-1" class="group border-[1.5px] border-wb-black bg-white p-6 sm:p-8 flex flex-col hover:-translate-y-1.5 hover:shadow-retro-lg transition-all duration-300 block">
+              <div class="relative aspect-[4/3] w-full bg-wb-blue-light/30 overflow-hidden mb-6 flex items-center justify-center border border-wb-black/10">
+                <img src="Img/project 1/web/De echte poster.jpg" alt="Student Challenge STOP! Poster" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]">
+              </div>
+
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-3 font-serif group-hover:text-wb-blue-dark transition-colors">
+                  Student Challenge STOP!
+                </h3>
+                <p class="text-sm text-wb-gray-text leading-relaxed mb-6 flex-grow font-sans">
+                  Een poster in het thema Stop als deel van de studenten challenge van Graphic Matters.
+                </p>
+                <div class="pt-4 border-t border-wb-black/10 flex items-center justify-end">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-bold border-b-[1.5px] border-wb-black pb-0.5 group-hover:text-wb-blue-dark group-hover:border-wb-blue-dark transition-all font-sans">
+                    Bekijk project &rarr;
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Card 2: De Wensput -->
+            <a href="#project-2" class="group border-[1.5px] border-wb-black bg-white p-6 sm:p-8 flex flex-col hover:-translate-y-1.5 hover:shadow-retro-lg transition-all duration-300 block">
+              <div class="relative aspect-[4/3] w-full bg-wb-blue-light/30 overflow-hidden mb-6 flex items-center justify-center border border-wb-black/10">
+                <img src="Img/project 2/wensput.jpg" alt="De Wensput — Installatie" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]">
+              </div>
+
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-3 font-serif group-hover:text-wb-blue-dark transition-colors">
+                  De Wensput
+                </h3>
+                <p class="text-sm text-wb-gray-text leading-relaxed mb-6 flex-grow font-sans">
+                  Een aantrekkelijke wensput die mensen laat ervaren hoe de wereld eruitziet zonder natuur waar bezoekers hun wens voor de toekomst van Tilburg kunnen achterlaten.
+                </p>
+                <div class="pt-4 border-t border-wb-black/10 flex items-center justify-end">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-bold border-b-[1.5px] border-wb-black pb-0.5 group-hover:text-wb-blue-dark group-hover:border-wb-blue-dark transition-all font-sans">
+                    Bekijk project &rarr;
+                  </span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA BANNER -->
+      <section class="border-t-[1.5px] border-wb-black bg-wb-gray-light py-16">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div class="max-w-xl text-center sm:text-left">
+            <h3 class="text-2xl sm:text-3xl font-bold mb-3 font-serif">
+              Interesse om samen te werken aan een nieuw project?
+            </h3>
+            <p class="text-base text-wb-gray-text font-serif leading-relaxed">
+              Ik sta open voor nieuwe ideeën, creatieve vraagstukken en uitdagingen.
+            </p>
+          </div>
+
+          <a href="#contact" class="inline-flex items-center justify-center font-bold px-8 py-4 bg-wb-black text-white border-[1.5px] border-wb-black hover:bg-white hover:text-wb-black hover:shadow-retro transition-all duration-200 font-sans text-sm tracking-wide shrink-0">
+            Neem contact op &rarr;
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- =================================================================
+         VIEW 2: PROJECTS OVERVIEW (#projects)
+         ================================================================= -->
+    <div id="viewProjects" class="page-view">
+      <section class="bg-wb-gradient-page text-wb-black py-12 sm:py-16 border-b border-wb-black/20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-3 font-serif">
+            Projecten
+          </h1>
+          <p class="text-base sm:text-lg max-w-2xl text-wb-black font-serif">
+            Hieronder zie je een overzicht van mijn projecten. Klik op een project voor meer informatie.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <!-- Project 1 Card -->
+            <a href="#project-1" class="group border-[1.5px] border-wb-black bg-white p-6 sm:p-8 flex flex-col hover:-translate-y-1.5 hover:shadow-retro-lg transition-all duration-300 block">
+              <div class="relative aspect-[4/3] w-full bg-wb-blue-light/30 overflow-hidden mb-6 flex items-center justify-center border border-wb-black/10">
+                <img src="Img/project 1/web/De echte poster.jpg" alt="Student Challenge STOP! Poster" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]">
+              </div>
+
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-3 font-serif group-hover:text-wb-blue-dark transition-colors">
+                  Student Challenge STOP!
+                </h3>
+                <p class="text-sm text-wb-gray-text leading-relaxed mb-6 flex-grow font-sans">
+                  Een poster in het thema Stop als deel van de studenten challenge van Graphic Matters.
+                </p>
+                <div class="pt-4 border-t border-wb-black/10 flex items-center justify-end">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-bold border-b-[1.5px] border-wb-black pb-0.5 group-hover:text-wb-blue-dark group-hover:border-wb-blue-dark transition-all font-sans">
+                    Bekijk project pagina &rarr;
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Project 2 Card -->
+            <a href="#project-2" class="group border-[1.5px] border-wb-black bg-white p-6 sm:p-8 flex flex-col hover:-translate-y-1.5 hover:shadow-retro-lg transition-all duration-300 block">
+              <div class="relative aspect-[4/3] w-full bg-wb-blue-light/30 overflow-hidden mb-6 flex items-center justify-center border border-wb-black/10">
+                <img src="Img/project 2/wensput.jpg" alt="De Wensput — Installatie" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]">
+              </div>
+
+              <div class="flex flex-col flex-grow">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-3 font-serif group-hover:text-wb-blue-dark transition-colors">
+                  De Wensput
+                </h3>
+                <p class="text-sm text-wb-gray-text leading-relaxed mb-6 flex-grow font-sans">
+                  Een aantrekkelijke wensput die mensen laat ervaren hoe de wereld eruitziet zonder natuur waar bezoekers hun wens voor de toekomst van Tilburg kunnen achterlaten.
+                </p>
+                <div class="pt-4 border-t border-wb-black/10 flex items-center justify-end">
+                  <span class="inline-flex items-center gap-1.5 text-sm font-bold border-b-[1.5px] border-wb-black pb-0.5 group-hover:text-wb-blue-dark group-hover:border-wb-blue-dark transition-all font-sans">
+                    Bekijk project pagina &rarr;
+                  </span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- =================================================================
+         VIEW 3: PROJECT 1 DETAIL (#project-1)
+         ================================================================= -->
+    <div id="viewProject1" class="page-view">
+      <!-- Breadcrumb Bar -->
+      <div class="border-b border-wb-black/15 bg-white py-4 px-6 sm:px-8">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 font-sans text-xs sm:text-sm">
+          <div class="flex items-center gap-2 text-wb-gray-text">
+            <a href="#home" class="hover:text-wb-black transition-colors">Home</a>
+            <span>/</span>
+            <a href="#projects" class="hover:text-wb-black transition-colors">Projecten</a>
+            <span>/</span>
+            <span class="text-wb-black font-semibold">Student Challenge STOP!</span>
+          </div>
+
+          <a href="#projects" class="inline-flex items-center gap-1.5 font-bold hover:text-wb-blue-dark transition-colors">
+            &larr; Terug naar projecten
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Hero Header -->
+      <section class="bg-wb-gradient-page py-12 sm:py-16 border-b border-wb-black/20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-xs font-bold uppercase tracking-wider bg-wb-black text-white px-3 py-1 font-sans shadow-retro-sm">
+              01 / 02
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider text-wb-black/80 font-sans">
+              Poster Design
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif mb-6 leading-tight max-w-4xl">
+            Student Challenge STOP!
+          </h1>
+
+          <div class="flex flex-wrap gap-6 sm:gap-10 pt-4 border-t border-wb-black/20 text-xs sm:text-sm font-sans">
+            <div>
+              <span class="block text-wb-black/60 font-medium">Jaar</span>
+              <strong class="text-wb-black text-base font-bold">2025</strong>
+            </div>
+            <div>
+              <span class="block text-wb-black/60 font-medium">Opdrachtgever</span>
+              <strong class="text-wb-black text-base font-bold">Graphic Matters</strong>
+            </div>
+            <div>
+              <span class="block text-wb-black/60 font-medium">Categorie</span>
+              <strong class="text-wb-black text-base font-bold">Poster Design &amp; Campagne</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Content & Media -->
+      <section class="py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 sm:gap-16 items-start">
+            
+            <!-- Left: Full Story -->
+            <div class="space-y-8">
+              <div class="border-[1.5px] border-wb-black bg-white p-7 sm:p-10 shadow-retro">
+                <h2 class="text-2xl sm:text-3xl font-bold font-serif mb-6 pb-3 border-b border-wb-black/15">
+                  Over het project
+                </h2>
+
+                <div class="space-y-5 text-base sm:text-lg leading-relaxed text-wb-black font-serif">
+                  <p>
+                    Wat als ons eigen plastic afval ineens op ons bord belandt? Met deze poster vraag ik aandacht voor de verontrustende aanwezigheid van microplastics in ons dagelijks eten.
+                  </p>
+                  <p>
+                    Ik heb gekozen voor een uitvergroot beeld van sushi. Sushi is populair, maar de vis zit door alle vervuiling in de oceaan vol met kleine stukjes plastic. Uiteindelijk eten we dit plastic zelf weer op.
+                  </p>
+                  <p>
+                    Boven het overdreven ontwerp staat de koptekst: &ldquo;De nieuwe smaak van de zee: microplastic&rdquo;. Door de sarcastische grap blijft de poster enigszins luchtig, maar komt de serieuze boodschap wel binnen: we eten op wat we zelf weggooien.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Process Gallery Highlights -->
+              <div>
+                <h3 class="text-xl sm:text-2xl font-bold font-serif mb-4 flex items-center justify-between">
+                  <span>Proces &amp; Details</span>
+                  <span class="text-xs text-wb-gray-text font-sans font-normal">(Klik om te vergroten)</span>
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <a href="Img/project 1/web/IMG_8571.jpg" data-lightbox="stop-gallery" data-lightbox-src="Img/project 1/web/IMG_8571.jpg" data-lightbox-title="Procesfoto 01 — Typografisch & Visueel Experiment" class="group border-[1.5px] border-wb-black bg-white p-2 shadow-retro hover:-translate-y-1 hover:shadow-retro-lg transition-all block">
+                    <div class="relative aspect-[3/4] bg-wb-blue-light/30 overflow-hidden">
+                      <img src="Img/project 1/web/IMG_8571.jpg" alt="Procesfoto 01" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <p class="text-xs font-sans font-bold mt-2 text-center text-wb-black group-hover:text-wb-blue-dark">Procesfoto 01</p>
+                  </a>
+
+                  <a href="Img/project 1/web/IMG_8586.jpg" data-lightbox="stop-gallery" data-lightbox-src="Img/project 1/web/IMG_8586.jpg" data-lightbox-title="Procesfoto 02 — Vormstudies en compositie" class="group border-[1.5px] border-wb-black bg-white p-2 shadow-retro hover:-translate-y-1 hover:shadow-retro-lg transition-all block">
+                    <div class="relative aspect-[3/4] bg-wb-blue-light/30 overflow-hidden">
+                      <img src="Img/project 1/web/IMG_8586.jpg" alt="Procesfoto 02" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <p class="text-xs font-sans font-bold mt-2 text-center text-wb-black group-hover:text-wb-blue-dark">Procesfoto 02</p>
+                  </a>
+
+                  <a href="Img/project 1/web/eind 1.jpg" data-lightbox="stop-gallery" data-lightbox-src="Img/project 1/web/eind 1.jpg" data-lightbox-title="Proces / Digitale Samenstelling" class="group border-[1.5px] border-wb-black bg-white p-2 shadow-retro hover:-translate-y-1 hover:shadow-retro-lg transition-all block">
+                    <div class="relative aspect-[3/4] bg-wb-blue-light/30 overflow-hidden">
+                      <img src="Img/project 1/web/eind 1.jpg" alt="Proces / Digitale Samenstelling" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <p class="text-xs font-sans font-bold mt-2 text-center text-wb-black group-hover:text-wb-blue-dark">Digitale Samenstelling</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Poster Display with Lightbox -->
+            <div>
+              <div class="sticky top-8">
+                <a href="Img/project 1/web/De echte poster.jpg" data-lightbox="stop-gallery" data-lightbox-src="Img/project 1/web/De echte poster.jpg" data-lightbox-title="Student Challenge STOP! — De echte poster" class="group border-[1.8px] border-wb-black bg-white p-3 sm:p-4 shadow-retro-lg hover:shadow-retro-xl transition-all duration-300 block relative cursor-zoom-in" title="Klik om de poster te vergroten">
+                  <div class="relative aspect-[3/4] w-full bg-wb-blue-light/30 border border-wb-black/10 overflow-hidden flex items-center justify-center">
+                    <img src="Img/project 1/web/De echte poster.jpg" alt="Student Challenge STOP! Poster" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]">
+                    
+                    <div class="absolute bottom-3 right-3 bg-wb-black text-white px-3 py-1.5 text-xs font-sans font-bold flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                      </svg>
+                      <span>Klik om te vergroten</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 pt-3 border-t border-wb-black/10 flex justify-between items-center text-xs font-sans text-wb-gray-text">
+                    <span class="font-bold text-wb-black">Origineel Posterontwerp</span>
+                    <span>Graphic Matters 2025</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination -->
+          <div class="mt-20 pt-10 border-t-[1.5px] border-wb-black flex flex-wrap items-center justify-between gap-6 font-sans">
+            <a href="#projects" class="inline-flex items-center gap-2 font-bold text-sm text-wb-gray-text hover:text-wb-black transition-colors">
+              &larr; Alle projecten
+            </a>
+
+            <a href="#project-2" class="inline-flex items-center gap-2 font-bold px-6 py-3 bg-wb-black text-white border-[1.5px] border-wb-black hover:bg-white hover:text-wb-black hover:shadow-retro transition-all text-sm">
+              <span>Volgend project: <strong>De Wensput</strong></span>
+              &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- =================================================================
+         VIEW 4: PROJECT 2 DETAIL (#project-2)
+         ================================================================= -->
+    <div id="viewProject2" class="page-view">
+      <!-- Breadcrumb Bar -->
+      <div class="border-b border-wb-black/15 bg-white py-4 px-6 sm:px-8">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 font-sans text-xs sm:text-sm">
+          <div class="flex items-center gap-2 text-wb-gray-text">
+            <a href="#home" class="hover:text-wb-black transition-colors">Home</a>
+            <span>/</span>
+            <a href="#projects" class="hover:text-wb-black transition-colors">Projecten</a>
+            <span>/</span>
+            <span class="text-wb-black font-semibold">De Wensput</span>
+          </div>
+
+          <a href="#projects" class="inline-flex items-center gap-1.5 font-bold hover:text-wb-blue-dark transition-colors">
+            &larr; Terug naar projecten
+          </a>
+        </div>
+      </div>
+
+      <!-- Project Hero Header -->
+      <section class="bg-wb-gradient-page py-12 sm:py-16 border-b border-wb-black/20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-xs font-bold uppercase tracking-wider bg-wb-black text-white px-3 py-1 font-sans shadow-retro-sm">
+              02 / 02
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider text-wb-black/80 font-sans">
+              Installatie &amp; Concept
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold font-serif mb-6 leading-tight max-w-4xl">
+            De Wensput
+          </h1>
+
+          <div class="flex flex-wrap gap-6 sm:gap-10 pt-4 border-t border-wb-black/20 text-xs sm:text-sm font-sans">
+            <div>
+              <span class="block text-wb-black/60 font-medium">Jaar</span>
+              <strong class="text-wb-black text-base font-bold">2026</strong>
+            </div>
+            <div>
+              <span class="block text-wb-black/60 font-medium">Opdrachtgever</span>
+              <strong class="text-wb-black text-base font-bold">VanGogh Homeland</strong>
+            </div>
+            <div>
+              <span class="block text-wb-black/60 font-medium">Categorie</span>
+              <strong class="text-wb-black text-base font-bold">Installatie &amp; Concept</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Casemovie Video Player -->
+      <section class="py-12 bg-wb-black text-white border-b border-wb-black">
+        <div class="max-w-5xl mx-auto px-6 sm:px-8">
+          <div class="mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-wb-blue-hero font-bold font-sans">Casemovie Video</span>
+              <h2 class="text-2xl sm:text-3xl font-bold font-serif">Ervaar de interventie</h2>
+            </div>
+            <span class="text-xs text-white/70 font-sans">Klik om de casemovie af te spelen</span>
+          </div>
+
+          <div class="video-wrapper">
+            <video id="casemovieVideo" controls poster="Img/project 2/wensput.jpg" preload="metadata">
+              <source src="Img/project 2/Casemovieeind.mp4" type="video/mp4">
+              Je browser ondersteunt deze videospeler niet.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story & Gallery -->
+      <section class="py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          
+          <div class="border-[1.5px] border-wb-black bg-white p-8 sm:p-12 shadow-retro mb-16">
+            <h2 class="text-2xl sm:text-3xl font-bold font-serif mb-6 pb-3 border-b border-wb-black/15">
+              Over het concept en de totstandkoming
+            </h2>
+
+            <div class="space-y-6 text-base sm:text-lg leading-relaxed text-wb-black font-serif">
+              <p>
+                Een aantrekkelijke wensput die mensen laat ervaren hoe de wereld eruitziet zonder natuur waar bezoekers hun wens voor de toekomst van Tilburg kunnen achterlaten.
+              </p>
+              <p>
+                Veel ouderen staan niet stil bij hoe belangrijk natuur is. Ze vinden natuur vaak mooi om naar te kijken en zijn regelmatig bezig met tuinieren. Biodiversiteit is echter niet alleen iets decoratiefs, maar van essentieel belang voor de leefkwaliteit. Deze put benadrukt het contrast tussen natuur en verstedelijking om zo meer bewustwording te creëren.
+              </p>
+              <p>
+                Door de aantrekkelijke buitenkant worden mensen verleid om dichterbij te komen. Wanneer zij vervolgens in de put kijken, worden zij geconfronteerd met de harde realiteit.
+              </p>
+              <p>
+                De interventie zorgt ervoor dat mensen zich realiseren wat er kan gebeuren als er geen actie wordt ondernomen. Hoewel de buitenkant van de put groen en uitnodigend lijkt, zien bezoekers binnenin een sterk verstedelijkt beeld waar nauwelijks ruimte overblijft voor natuur. Dit confronteert ze met de mogelijke toekomst waarin groen de stad steeds meer verlaat.
+              </p>
+              <p>
+                Naast het visuele contrast speelt ook geluid een belangrijke rol binnen de ervaring. Terwijl bezoekers in de put kijken, horen zij de wensen van andere ouderen uit Tilburg. Ze vertellen hoe ze hopen dat er actie wordt ondernomen voor de vergroening van de stad. Hierdoor ontstaat er niet alleen bewustwording over het onderwerp, maar ook een gevoel van verbondenheid tussen de inwoners.
+              </p>
+              <p>
+                Om deze bewustwording om te zetten in actie kunnen bezoekers aan het einde van de ervaring zelf een wens achter laten bij de put. Daarnaast krijgen ze een plantje mee naar huis. Door dit plantje worden ze actief betrokken bij het thema en nemen ze een tastbare herinnering van de interventie mee. Het plantje symboliseert dat iedereen, hoe klein de bijdrage is, een rol kan spelen in het behoud van de natuur.
+              </p>
+              <p class="font-bold text-wb-blue-dark">
+                Deze wensput laat ouderen zien dat de natuur niet alleen mooi en decoratief is, maar essentieel onderdeel vormt van een gezonde, leefbare, toekomstbestendige stad.
+              </p>
+            </div>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div class="mb-16">
+            <div class="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-3">
+              <div>
+                <h3 class="text-2xl sm:text-3xl font-bold font-serif">Fotogalerij &amp; Documentatie</h3>
+                <p class="text-sm text-wb-gray-text font-sans mt-1">Beelden van de installatie, de constructie en de ervaring</p>
+              </div>
+              <span class="text-xs text-wb-gray-text font-sans font-medium">(Klik om te vergroten)</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              
+              <a href="Img/project 2/wensput.jpg" data-lightbox="wensput-gallery" data-lightbox-src="Img/project 2/wensput.jpg" data-lightbox-title="De Wensput — Buitenaanzicht installatie" class="group border-[1.5px] border-wb-black bg-white p-3 shadow-retro hover:-translate-y-1.5 hover:shadow-retro-lg transition-all block">
+                <div class="relative aspect-[4/3] bg-wb-blue-light/30 overflow-hidden mb-2">
+                  <img src="Img/project 2/wensput.jpg" alt="De Wensput — Buitenaanzicht" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <p class="text-xs font-sans font-bold text-wb-black group-hover:text-wb-blue-dark">Buitenaanzicht</p>
+                <p class="text-[11px] text-wb-gray-text font-sans">Groene uitnodigende buitenkant</p>
+              </a>
+
+              <a href="Img/project 2/versteend.png" data-lightbox="wensput-gallery" data-lightbox-src="Img/project 2/versteend.png" data-lightbox-title="Versteend Beeld — Binnenin de put" class="group border-[1.5px] border-wb-black bg-white p-3 shadow-retro hover:-translate-y-1.5 hover:shadow-retro-lg transition-all block">
+                <div class="relative aspect-[4/3] bg-wb-blue-light/30 overflow-hidden mb-2">
+                  <img src="Img/project 2/versteend.png" alt="Versteend Beeld — Binnenin de put" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <p class="text-xs font-sans font-bold text-wb-black group-hover:text-wb-blue-dark">Binnenin de put</p>
+                <p class="text-[11px] text-wb-gray-text font-sans">Versteend beeld zonder natuur</p>
+              </a>
+
+              <a href="Img/project 2/WhatsApp Image 2026-06-17 at 17.30.11.jpeg" data-lightbox="wensput-gallery" data-lightbox-src="Img/project 2/WhatsApp Image 2026-06-17 at 17.30.11.jpeg" data-lightbox-title="Proces & Constructie I" class="group border-[1.5px] border-wb-black bg-white p-3 shadow-retro hover:-translate-y-1.5 hover:shadow-retro-lg transition-all block">
+                <div class="relative aspect-[4/3] bg-wb-blue-light/30 overflow-hidden mb-2">
+                  <img src="Img/project 2/WhatsApp Image 2026-06-17 at 17.30.11.jpeg" alt="Proces & Constructie I" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <p class="text-xs font-sans font-bold text-wb-black group-hover:text-wb-blue-dark">Bouwproces I</p>
+                <p class="text-[11px] text-wb-gray-text font-sans">Fysieke constructie & vorm</p>
+              </a>
+
+              <a href="Img/project 2/WhatsApp Image 2026-06-17 at 17.30.15.jpeg" data-lightbox="wensput-gallery" data-lightbox-src="Img/project 2/WhatsApp Image 2026-06-17 at 17.30.15.jpeg" data-lightbox-title="Proces & Constructie II" class="group border-[1.5px] border-wb-black bg-white p-3 shadow-retro hover:-translate-y-1.5 hover:shadow-retro-lg transition-all block">
+                <div class="relative aspect-[4/3] bg-wb-blue-light/30 overflow-hidden mb-2">
+                  <img src="Img/project 2/WhatsApp Image 2026-06-17 at 17.30.15.jpeg" alt="Proces & Constructie II" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <p class="text-xs font-sans font-bold text-wb-black group-hover:text-wb-blue-dark">Bouwproces II</p>
+                <p class="text-[11px] text-wb-gray-text font-sans">Afwerking & interactieve details</p>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pt-10 border-t-[1.5px] border-wb-black flex flex-wrap items-center justify-between gap-6 font-sans">
+            <a href="#project-1" class="inline-flex items-center gap-2 font-bold px-6 py-3 bg-wb-black text-white border-[1.5px] border-wb-black hover:bg-white hover:text-wb-black hover:shadow-retro transition-all text-sm">
+              &larr;
+              <span>Vorig project: <strong>Student Challenge STOP!</strong></span>
+            </a>
+
+            <a href="#projects" class="inline-flex items-center gap-2 font-bold text-sm text-wb-gray-text hover:text-wb-black transition-colors">
+              Alle projecten &rarr;
+            </a>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- =================================================================
+         VIEW 5: ABOUT (#about)
+         ================================================================= -->
+    <div id="viewAbout" class="page-view">
+      <section class="bg-wb-gradient-page text-wb-black py-12 sm:py-16 border-b border-wb-black/20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <div class="max-w-3xl">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-3 font-serif">
+              Over Mij
+            </h1>
+            <p class="text-base sm:text-lg text-wb-black font-serif">
+              Een introductie tot wie ik ben, wat mij inspireert en waar ik aan werk.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 sm:gap-16 items-start">
+            
+            <!-- Left: Editorial text -->
+            <div class="border-[1.5px] border-wb-black bg-white p-8 sm:p-11 shadow-retro space-y-6">
+              <h2 class="text-3xl sm:text-4xl font-bold font-serif pb-3 border-b border-wb-black/20">
+                Hi, ik ben Karlijn.
+              </h2>
+              
+              <div class="space-y-5 text-base sm:text-lg leading-relaxed text-wb-black font-serif">
+                <p>
+                  Ik ben een tweedejaars CMD-student aan Avans Hogeschool met een passie voor ontwerpen dat mensen aan het denken zet. Als ontwerper begin ik altijd met luisteren: naar jouw verhaal, naar de doelgroep en naar andere meningen. Juist door open te staan voor verschillende perspectieven ontstaan er nieuwe inzichten die een idee van &lsquo;gewoon goed&rsquo; naar verrassend en impactvol tillen.
+                </p>
+
+                <p>
+                  Mijn creatieve ideeën breng ik tot leven met tools als Adobe Illustrator, Photoshop en Premiere Pro. Die praktijkervaring pas ik niet alleen toe in studieprojecten, maar ook als vrijwilliger bij de Stichting Dongense Jeugdraad, waar ik het promotiemateriaal verzorg. Mijn doel bij elke opdracht? Het maximale uit een concept halen en jou als opdrachtgever verrassen met een frisse, nieuwe blik.
+                </p>
+              </div>
+
+              <div class="pt-6 border-t border-wb-black/20 flex flex-wrap items-center justify-between gap-4 font-sans">
+                <a href="#contact" class="inline-flex items-center justify-center font-bold px-7 py-3.5 bg-wb-black text-white border-[1.5px] border-wb-black hover:bg-white hover:text-wb-black hover:shadow-retro transition-all text-sm tracking-wide">
+                  Neem contact met mij op &rarr;
+                </a>
+
+                <a href="#projects" class="inline-flex items-center font-bold text-sm border-b-[1.5px] border-wb-black pb-0.5 hover:text-wb-blue-dark hover:border-wb-blue-dark transition-all">
+                  Bekijk projecten &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Right: Real photos -->
+            <div class="flex flex-col gap-6 sm:gap-8">
+              <div class="border-[1.5px] border-wb-black bg-white p-3 sm:p-4 shadow-retro hover:-translate-y-1 hover:shadow-retro-lg transition-all duration-300">
+                <a href="Img/homepagina.jpg" data-lightbox="about-gallery" data-lightbox-src="Img/homepagina.jpg" data-lightbox-title="Hi, ik ben Karlijn" class="block cursor-zoom-in">
+                  <div class="relative aspect-[4/5] w-full bg-wb-blue-light/30 border border-wb-black overflow-hidden">
+                    <img src="Img/homepagina.jpg" alt="Hi, ik ben Karlijn" class="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-500">
+                  </div>
+                </a>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                <div class="border-[1.5px] border-wb-black bg-white p-2.5 shadow-retro hover:-translate-y-1 hover:shadow-retro-lg transition-all duration-300">
+                  <a href="Img/overmij2_web.jpg" data-lightbox="about-gallery" data-lightbox-src="Img/overmij2_web.jpg" data-lightbox-title="Karlijn met camera bij evenement" class="block cursor-zoom-in">
+                    <div class="relative aspect-[3/4] w-full bg-wb-blue-light/30 border border-wb-black overflow-hidden">
+                      <img src="Img/overmij2_web.jpg" alt="Karlijn met camera bij evenement" class="w-full h-full object-cover object-top hover:scale-[1.03] transition-transform duration-500">
+                    </div>
+                  </a>
+                </div>
+
+                <div class="border-[1.5px] border-wb-black bg-white p-2.5 shadow-retro hover:-translate-y-1 hover:shadow-retro-lg transition-all duration-300">
+                  <a href="Img/overmij_web.jpg" data-lightbox="about-gallery" data-lightbox-src="Img/overmij_web.jpg" data-lightbox-title="Karlijn zwart-wit portret" class="block cursor-zoom-in">
+                    <div class="relative aspect-[3/4] w-full bg-wb-blue-light/30 border border-wb-black overflow-hidden">
+                      <img src="Img/overmij_web.jpg" alt="Karlijn zwart-wit portret" class="w-full h-full object-cover object-top hover:scale-[1.03] transition-transform duration-500">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- =================================================================
+         VIEW 6: CONTACT (#contact)
+         ================================================================= -->
+    <div id="viewContact" class="page-view">
+      <section class="bg-wb-gradient-page text-wb-black py-12 sm:py-16 border-b border-wb-black/20 text-center">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-3 font-serif">
+            Contact
+          </h1>
+          <p class="text-base sm:text-lg max-w-xl mx-auto text-wb-black font-serif">
+            Heb je een vraag, idee of wil je samenwerken? Stuur een bericht via het formulier of bereik me direct per e-mail en social media.
+          </p>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 sm:gap-16 items-start">
+            
+            <!-- Left: Email & Socials -->
+            <div class="flex flex-col gap-10">
+              
+              <!-- Direct Email Card -->
+              <div class="border-[1.5px] border-wb-black bg-white p-7 sm:p-9 shadow-retro hover:shadow-retro-lg transition-all duration-300">
+                <h3 class="text-2xl font-bold mb-3 font-serif">Direct E-mailen</h3>
+                <p class="text-sm text-wb-gray-text mb-4 leading-relaxed font-sans">
+                  Je kunt me altijd rechtstreeks mailen voor samenwerkingen, projectaanvragen of gewoon een praatje.
+                </p>
+                
+                <div class="bg-wb-blue-light border-[1.2px] border-wb-black p-5 flex flex-col gap-4">
+                  <span class="text-lg sm:text-xl font-bold break-all text-wb-black font-serif">
+                    karlijn.van.baaren@outlook.com
+                  </span>
+                  
+                  <div class="flex gap-3 flex-wrap">
+                    <a href="mailto:karlijn.van.baaren@outlook.com" class="inline-flex items-center gap-2 font-bold text-xs sm:text-sm px-4 py-2 border-[1.2px] border-wb-black bg-white hover:bg-wb-black hover:text-white transition-all font-sans" title="Open je e-mailprogramma">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                      Stuur E-mail
+                    </a>
+                    
+                    <button type="button" class="btn-copy-email inline-flex items-center gap-2 font-bold text-xs sm:text-sm px-4 py-2 border-[1.2px] border-wb-black bg-white hover:bg-wb-black hover:text-white text-wb-black transition-all font-sans cursor-pointer" data-email="karlijn.van.baaren@outlook.com" title="Kopieer e-mailadres naar klembord">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                      <span>Kopieer Adres</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Socials -->
+              <div class="border-[1.5px] border-wb-black bg-white p-7 sm:p-9 shadow-retro">
+                <h3 class="text-2xl font-bold mb-3 font-serif">Social Media</h3>
+                <p class="text-sm text-wb-gray-text mb-6 leading-relaxed font-sans">
+                  Volg mijn recente updates, experimenten en creatieve processen op social media:
+                </p>
+
+                <div class="flex flex-col gap-4 font-sans">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 sm:p-5 border-[1.5px] border-wb-black bg-white font-bold text-base hover:bg-wb-black hover:text-white hover:translate-x-1.5 transition-all group shadow-retro-sm">
+                    <div class="flex items-center gap-3.5">
+                      <svg class="w-5 h-5 stroke-current group-hover:stroke-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                      </svg>
+                      <span>Instagram</span>
+                    </div>
+                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 sm:p-5 border-[1.5px] border-wb-black bg-white font-bold text-base hover:bg-wb-black hover:text-white hover:translate-x-1.5 transition-all group shadow-retro-sm">
+                    <div class="flex items-center gap-3.5">
+                      <svg class="w-5 h-5 stroke-current group-hover:stroke-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                      <span>LinkedIn</span>
+                    </div>
+                    <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Availability Status Badge -->
+              <div class="border-[1.2px] border-wb-black bg-emerald-50 p-5 flex items-center gap-3.5">
+                <div class="w-3.5 h-3.5 rounded-full bg-emerald-500 pulse-emerald shrink-0"></div>
+                <div class="text-xs font-sans">
+                  <strong class="text-emerald-900 block font-bold">Beschikbaar voor nieuwe projecten</strong>
+                  <span class="text-emerald-800 opacity-90">Open voor freelance opdrachten, creatieve concepten &amp; samenwerkingen.</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="border-[1.5px] border-wb-black bg-white p-7 sm:p-10 shadow-retro" id="formWrapper">
+              <div class="mb-6">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-2 font-serif">Stuur een Bericht</h3>
+                <p class="text-sm text-wb-gray-text font-sans">
+                  Vul het onderstaande formulier in en ik kom zo snel mogelijk bij je terug.
+                </p>
+              </div>
+
+              <div id="formStatusContainer" style="display: none;"></div>
+
+              <form id="contactForm" class="space-y-5">
+                <div>
+                  <label for="name" class="block text-xs font-bold uppercase tracking-wider mb-2 font-sans">
+                    Naam <span class="text-red-500">*</span>
+                  </label>
+                  <input type="text" id="name" name="name" required placeholder="Bijv. Sophie de Vries" class="w-full border-[1.5px] border-wb-black p-3 text-base bg-white focus:outline-none focus:ring-2 focus:ring-wb-blue-hero font-sans">
+                </div>
+
+                <div>
+                  <label for="email" class="block text-xs font-bold uppercase tracking-wider mb-2 font-sans">
+                    E-mailadres <span class="text-red-500">*</span>
+                  </label>
+                  <input type="email" id="email" name="email" required placeholder="naam@voorbeeld.nl" class="w-full border-[1.5px] border-wb-black p-3 text-base bg-white focus:outline-none focus:ring-2 focus:ring-wb-blue-hero font-sans">
+                </div>
+
+                <div>
+                  <label for="subject" class="block text-xs font-bold uppercase tracking-wider mb-2 font-sans">
+                    Onderwerp
+                  </label>
+                  <input type="text" id="subject" name="subject" placeholder="Bijv. Projectaanvraag Branding" class="w-full border-[1.5px] border-wb-black p-3 text-base bg-white focus:outline-none focus:ring-2 focus:ring-wb-blue-hero font-sans">
+                </div>
+
+                <div>
+                  <label for="message" class="block text-xs font-bold uppercase tracking-wider mb-2 font-sans">
+                    Bericht <span class="text-red-500">*</span>
+                  </label>
+                  <textarea id="message" name="message" rows="4" required placeholder="Vertel me meer over je project of vraag..." class="w-full border-[1.5px] border-wb-black p-3 text-base bg-white focus:outline-none focus:ring-2 focus:ring-wb-blue-hero font-sans resize-y"></textarea>
+                </div>
+
+                <button type="submit" class="w-full inline-flex items-center justify-center gap-2 font-bold px-7 py-4 bg-wb-black text-white border-[1.5px] border-wb-black hover:bg-white hover:text-wb-black hover:shadow-retro transition-all duration-200 font-sans cursor-pointer">
+                  <svg class="w-4 h-4 inline-block mr-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  Verstuur Bericht
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- =================================================================
+       SITE FOOTER
+       ================================================================= -->
+  <footer class="border-t-[1.5px] border-wb-black py-10 bg-white text-center">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-5">
+      <ul class="flex gap-8 list-none text-base font-semibold flex-wrap justify-center font-sans m-0 p-0">
+        <li>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-wb-black hover:underline hover:text-wb-blue-dark transition-colors">
+            Instagram
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-wb-black hover:underline hover:text-wb-blue-dark transition-colors">
+            LinkedIn
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p class="text-xs text-wb-gray-text font-sans m-0">
+        &copy; <span id="currentYear">2026</span> Karlijn. Alle rechten voorbehouden.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
